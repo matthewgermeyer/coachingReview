@@ -1,0 +1,136 @@
+* {
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+/* Jumbotron - Images */
+.jumbotron {
+  display: flex;
+}
+
+.diagram {
+  border: 1px solid darkcyan;
+}
+
+.team {
+  width: 480px;
+  border: 1px solid darkcyan;
+  margin: 3px;
+}
+
+/*Toolbar */
+.toolbar {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  color: whitesmoke;
+  background-color: slategray;
+  margin: 2px;
+}
+
+.tool {
+  margin: 3px;
+  border: 3px solid black;
+}
+
+.event {
+  flex: auto;
+  background-color: salmon;
+}
+
+.tactical {
+  flex: auto;
+  background-color: darkviolet;
+}
+
+.recordNote {
+  flex: auto;
+  background-color: darkseagreen;
+}
+
+/* Sketchpad */
+.sketchpad {
+  height: 38vh;
+  margin: 2px;
+  padding: 3px;
+  background-color: slategray;
+}
+
+/* Team Cards Grid */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Player Cards */
+.card {
+  display: flex;
+  flex-direction: row;
+  min-height: 66px;
+  width: 200px;
+  min-width: 180px;
+  margin: 3px;
+  border: 3px solid black;
+  position: relative;
+}
+
+.card h6 {
+  padding: 5px;
+  border: 2px solid black;
+  font-weight: 900;
+  text-shadow: rgb(48, 86, 156, 0.2);
+  font-size: 14px;
+}
+
+.card p {
+  padding: 5px;
+  border: 2px solid black;
+  font-size: 12px;
+  font-weight: 200;
+  /* display:none; */
+}
+
+/* Player position card styles */
+.gk {
+  color: black;
+  background-color: greenyellow;
+}
+
+.cb {
+  color: black;
+  background-color: cyan;
+}
+
+.lb,
+.rb {
+  color: black;
+  background-color: cyan;
+}
+
+.cm {
+  background-color: darkgreen;
+  color: black;
+}
+
+.fw {
+  color: black;
+  background-color: crimson;
+}
+
+.inactive {
+  color: black;
+  background-color: darkslategrey;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  font-weight: 100;
+  font-size: 3vh;
+  background: lightskyblue;
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+}
