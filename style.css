@@ -7,11 +7,11 @@
 
 /* Jumbotron - Images */
 .jumbotron {
-  /* display: flex; */
+
 }
 
 .diagram {
-  /* border: 1px solid darkcyan; */
+
 }
 
 .team {
@@ -20,30 +20,33 @@
 
 /*Toolbar */
 .toolbar {
-  display: flex;
-  flex-wrap: nowrap;
-  text-align: center;
-  color: whitesmoke;
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
   background-color: slategray;
+  grid-template-areas:
+  'tac note event'
 }
 
 .tool {
+
+  text-align: center;
   margin: 2px;
+  color: whitesmoke;
   border: 3px solid black;
 }
 
 .event {
-  flex: auto;
+  grid-area: event;
   background-color: salmon;
 }
 
 .tactical {
-  flex: auto;
+  grid-area: tac;
   background-color: darkviolet;
 }
 
 .recordNote {
-  flex: auto;
+  grid-area: note;
   background-color: darkseagreen;
 }
 
@@ -57,69 +60,156 @@
 /* Team Cards Grid */
 .cards {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(12, minmax(240, 1fr));
+  grid-gap: 4px;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(5, 1fr); 
+  grid-template-areas: 
+  'ia1 lw cf rw ia2'
+  'ia3 cm1 cm2 cm3 ia4'
+  'lb lcb gk rcb rb'
+  ; 
+
 }
 
 /* Player Cards */
 .card {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  min-height: 66px;
-  min-width: 100px;
-  max-width: 150px;
-  border: 2px solid black;
+  align-items: center; 
+  min-height: 60px;
+  min-width: 180px;
+ max-width: auto;
+  border: 3px solid black;
 }
 
 .card h6 {
+
   font-weight: 600;
   text-shadow: rgb(48, 86, 156, 0.2);
   font-size: 14px;
 }
 
-.card p {
+/* .card p {
   display: none;
   text-align: center;
   padding: 5px;
   border: 2px solid black;
   font-size: 12px;
   font-weight: 200;
-}
+} */
 
 /* Player position card styles */
 .gk {
-  color: black;
-  background-color: greenyellow;
   grid-area: gk;
+  color: black;
+  background-color: lawngreen;
 }
 
-.cb {
-  color: black;
+.lcb {
+ grid-area: lcb;
+  color: whitesmoke;
   background-color: cyan;
 }
 
-.lb,
+.rcb {
+  grid-area: rcb;
+  color: whitesmoke;
+  background-color: cyan;
+}
+
+.lb {
+  grid-area: lb;
+  color: smoke;
+  background-color: cyan;
+}
 .rb {
+ grid-area: rb;
   color: black;
   background-color: cyan;
 }
 
-.cm {
+.cm1 
+{
+  grid-area: cm1;
+  background-color: darkgreen;
+  color: black;
+}
+.cm2{
+  grid-area: cm2;
+  background-color: darkgreen;
+  color: black;
+} 
+
+.cm3 {
+  grid-area: cm3;
   background-color: darkgreen;
   color: black;
 }
 
-.fw {
+/*
+.cm {
+  background-color: darkgreen;
+  color: whitesmoke; 
+} 
+
+.cdm {
+  background-color: darkgreen;
+  color: black;
+} 
+
+ .fw {
+  color: black;
+  background-color: crimson;
+}  */
+
+.rw {
+ grid-area: rw;
+  color: black;
+  background-color: crimson;
+}
+.lw {
+  grid-area: lw;
+  color: black;
+  background-color: crimson;
+}
+.cf {
+  grid-area: cf;
   color: black;
   background-color: crimson;
 }
 
-.inactive {
+.ia1 {
+  grid-area: ia1;
   color: black;
   background-color: darkslategrey;
+  /* display: none; */
 }
+
+.ia2 {
+  grid-area: ia2;
+  color: black;
+  background-color: darkslategrey;
+  /* display: none; */
+}
+.ia3 {
+  grid-area: ia3;
+  color: black;
+  background-color: darkslategrey;
+  /* display: none; */
+}
+.ia4 {
+  grid-area: ia4;
+  background-color: darkslategrey;
+  /* display: none; */
+}
+
+.inactive {
+  display: none;
+  border-bottom: 6px dotted purple;
+}
+
+
+
 
 /* footer */
 .footer {
